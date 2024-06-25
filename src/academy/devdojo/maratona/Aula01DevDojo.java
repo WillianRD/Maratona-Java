@@ -1,4 +1,4 @@
-package academy.devdojo;
+package academy.devdojo.maratona;
 /**
  * Isso é um comentário <br>javadoc </br> */
 public class Aula01DevDojo {

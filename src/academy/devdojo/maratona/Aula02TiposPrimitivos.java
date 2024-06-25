@@ -1,6 +1,4 @@
-package academy.devdojo;
-
-import java.security.spec.RSAOtherPrimeInfo;
+package academy.devdojo.maratona;
 
 public class Aula02TiposPrimitivos {
     public static void main(String[] args) {

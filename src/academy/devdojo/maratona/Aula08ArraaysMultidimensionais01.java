@@ -1,4 +1,4 @@
-package academy.devdojo;
+package academy.devdojo.maratona;
 
 public class Aula08ArraaysMultidimensionais01 {
     public static void main(String[] args) {

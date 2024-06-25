@@ -1,4 +1,4 @@
-package academy.devdojo;
+package academy.devdojo.maratona;
 
 import java.util.Scanner;
 

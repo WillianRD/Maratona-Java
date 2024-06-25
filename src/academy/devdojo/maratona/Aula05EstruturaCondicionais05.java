@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava;
+package academy.devdojo.maratona;
 
 public class Aula05EstruturaCondicionais05 {
     public static void main(String[] args) {
