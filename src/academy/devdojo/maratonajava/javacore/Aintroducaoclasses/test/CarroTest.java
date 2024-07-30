@@ -15,7 +15,8 @@ public class CarroTest {
         carros2.Modelo = "GT 500";
         carros2.Ano =  2020;
 
-
+        carros = carros2;
+        System.out.println("\n Carros da Lista");
         System.out.println(carros.Nome);
         System.out.println(carros.Modelo);
         System.out.println(carros.Ano);
