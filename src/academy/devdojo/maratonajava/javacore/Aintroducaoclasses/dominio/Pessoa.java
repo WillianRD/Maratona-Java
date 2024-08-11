@@ -1,82 +1,85 @@
 package academy.devdojo.maratonajava.javacore.Aintroducaoclasses.dominio;
 
 public class Pessoa {
+    // Variaveis que são usadas para guardar informações da classe Pessoa
     private String nome;
     private int idade;
-    public char sexo;
-    private int cpf;
-    private int altura;
-//    private int cabelo;
-//    private String corDaPele;
-//    private String olhos;
+    private String sexo;
+    private String cpf;
+    private double altura;
+    private String cabelo;
 
+    //    Criado o método para imprimir os valores
     public void Imprime() {
         System.out.println(this.nome);
         System.out.println(this.idade);
+        System.out.println(this.sexo);
         System.out.println(this.cpf);
         System.out.println(this.altura);
-        System.out.println(this.sexo);
+
     }
 
+    //    Método setter que busca o nome da pessoa e faz uma validação caso se for menor
+//    que três caracteres, ele imprime uma menssagem de erro
     public void setNome(String nome) {
         if (nome.length() < 3) {
-            System.out.println("NOME: Seu usuário tem que ter no minimo três caracteres ");
+            System.out.println("ERRO: Nome no formato errado");
             return;
         }
         this.nome = nome;
     }
 
+    //    Método para verificar a idade, se for < || = o print mostra o erro
     public void setIdade(int idade) {
         if (idade <= 0) {
-            System.out.println("IDADE: Idade Inválida");
+            System.out.println("ERRO: Idade Inválida");
             return;
         }
         this.idade = idade;
     }
 
-    public void setCpf(int cpf) {
-        if (cpf <= 11) {
-            System.out.println("Seu CPF não pode estar vazio ");
+    //    Método para verificar o CPF, caso seja menor que 11 da um print na tela de erro
+    public void setCpf(String cpf) {
+        if (cpf.length() < 12) {
+            System.out.println("ERRO: Seu CPF não possui a quantidade de caracteres correta");
+            return;
         }
-        this.cpf = 0;
+        this.cpf = cpf;
     }
 
-    public void setAltura(int altura) {
+    // Caso a altura nãao seja informada, mostra um print na tela de Erro
+    public void setAltura(double altura) {
         if (altura == 0) {
-            System.out.println("Altura não informada");
+            System.out.println("ERRO: Altura não informada");
         }
-        this.altura = 120;
+        this.altura = altura;
     }
 
-    public void setSexo(char sexo) {
+    //    Validaçãoa do sexo da class Pessoa, se a
+    public void setSexo(String sexo) {
         switch (sexo) {
-            case 'M':
-                System.out.println("Masculino");
+            case "Masculino":
+            case "Feminino":
                 break;
-            case 'F':
-                System.out.println("Feminino");
-                break;
-
             default:
-                System.out.println("Sexo invalido");
+                System.out.println("ERRO: Sexo invalido");
+                return;
         }
         this.sexo = sexo;
     }
 
-    public void setCabelo(byte cabelo) {
+    public void setCabelo(String cabelo) {
         switch (cabelo) {
-            case 1:
-                System.out.println("Morena");
-                break;
-            case 2:
-                System.out.println("Loira");
-                break;
-            case 3:
-                System.out.println("Ruiva");
+            case "Morena":
+            case "Loira":
+            case "Ruiva":
+                this.cabelo = cabelo;
                 break;
             default:
-                System.out.println("Nenhum definido");
+                System.out.println("ERRO: Nenhum tipo de cabelo definido");
+                return;
         }
+        this.cabelo = cabelo;
     }
 
     public String getNome() {
@@ -87,19 +90,20 @@ public class Pessoa {
         return this.idade;
     }
 
-    public char getSexo() {
-        return this.sexo;
-    }
-
-    public int getCpf() {
+    public String getCpf() {
         return this.cpf;
     }
 
-    public int getAltura() {
+    public double getAltura() {
         return this.altura;
     }
 
-    public char sexo(char m) {
+    public String getSexo() {
         return this.sexo;
     }
+
+    public String getCabelo() {
+        return this.cabelo;
+    }
 }
+
