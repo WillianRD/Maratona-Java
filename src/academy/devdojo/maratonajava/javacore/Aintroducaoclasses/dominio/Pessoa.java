@@ -9,16 +9,6 @@ public class Pessoa {
     private double altura;
     private String cabelo;
 
-    //    Criado o método para imprimir os valores
-    public void Imprime() {
-        System.out.println(this.nome);
-        System.out.println(this.idade);
-        System.out.println(this.sexo);
-        System.out.println(this.cpf);
-        System.out.println(this.altura);
-
-    }
-
     //    Método setter que busca o nome da pessoa e faz uma validação caso se for menor
 //    que três caracteres, ele imprime uma menssagem de erro
     public void setNome(String nome) {

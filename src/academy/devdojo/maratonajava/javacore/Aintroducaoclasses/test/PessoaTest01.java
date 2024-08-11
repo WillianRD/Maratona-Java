@@ -15,7 +15,6 @@ public class PessoaTest01 {
         pessoa.setSexo("Masculino");
         pessoa.setCabelo("Ruiva");
 
-        //pessoa.Imprime();
         System.out.println("---------------------------");
         System.out.println("Seu nome: "+pessoa.getNome());
         System.out.println("Sua idade: "+pessoa.getIdade());
