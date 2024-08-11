@@ -8,11 +8,11 @@ public class PessoaTest01 {
 
         System.out.println("LISTA DE ERROS");
 
-        pessoa.setNome("Will");
-        pessoa.setIdade(20);
-        pessoa.setCpf("123456789---");
+        pessoa.setNome("ana");
+        pessoa.setIdade(1);
+        pessoa.setCpf("123456789-00");
         pessoa.setAltura(1.83);
-        pessoa.setSexo("Masculinao");
+        pessoa.setSexo("Masculino");
         pessoa.setCabelo("Ruiva");
 
         //pessoa.Imprime();
