@@ -6,21 +6,24 @@ public class PessoaTest01 {
     public static void main(String[] args) {
         Pessoa pessoa = new Pessoa();
 
-        System.out.println("LISTA DE ERROS");
-
-        pessoa.setNome("ana");
+        pessoa.setNome("Ana");
         pessoa.setIdade(1);
         pessoa.setCpf("123456789-00");
-        pessoa.setAltura(1.83);
-        pessoa.setSexo("Masculino");
+        pessoa.setAltura(190);
+        pessoa.setSexo("Feminino");
         pessoa.setCabelo("Ruiva");
+        pessoa.setSuaCorFavorita("Vermelho");
+        pessoa.setCorDosOlhos("Castanhos Claro");
+        pessoa.setImovelPessoal("Sim");
+        pessoa.setTemCarroOuMoto("Carro");
+        pessoa.setVerificarQuantidadeDeVeiculos(5);
 
-        System.out.println("---------------------------");
-        System.out.println("Seu nome: "+pessoa.getNome());
-        System.out.println("Sua idade: "+pessoa.getIdade());
-        System.out.println("Seu CPF: "+pessoa.getCpf());
-        System.out.println("Sua Altura é: "+pessoa.getAltura());
-        System.out.println("Seu sexo: " +pessoa.getSexo());
-        System.out.println("Seu tipo de cabelo é: "+pessoa.getCabelo());
+        System.out.println("--------------------------------");
+        System.out.println("Registro de Pessoa");
+        System.out.println("Seu nome: "+pessoa.getNome() + "\n" +"Sua idade: "+pessoa.getIdade() + "\n" + "Seu CPF: "+pessoa.getCpf());
+        System.out.println("Sua Altura é: "+pessoa.getAltura() + "\n" + "Seu sexo: " +pessoa.getSexo());
+        System.out.println("Seu tipo de cabelo é: " +pessoa.getCabelo() + "\n" + "Sua cor Favorita é: "+pessoa.getSuaCorFavorita() );
+        System.out.println("Sua cor dos olhos é: "+pessoa.getCorDosOlgos() + "\n" + "Você tem imovel:" + pessoa.getImovelPessoal() + "\n" + "Você tem Carro ou Moto: ");
+        System.out.println("Quantidade De Veículos: "+pessoa.getVerificarQuantidadeDeVeiculos());
     }
 }
