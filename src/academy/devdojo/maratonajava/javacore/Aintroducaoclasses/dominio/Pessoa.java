@@ -158,7 +158,7 @@ public class Pessoa {
         return this.suaCorFavorita;
     }
 
-    public String getCorDosOlgos() {
+    public String getCorDosOlhos() {
         return this.corDosOlhos;
     }
 

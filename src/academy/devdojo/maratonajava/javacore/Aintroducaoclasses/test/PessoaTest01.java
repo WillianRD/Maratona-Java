@@ -12,8 +12,8 @@ public class PessoaTest01 {
         pessoa.setAltura(1.83);
         pessoa.setSexo("Feminino");
         pessoa.setCabelo("Ruiva");
-        pessoa.setSuaCorFavorita("Azul");
-        pessoa.setCorDosOlgos("Castanhos Escuros");
+        pessoa.setSuaCorFavorita("Vermelho");
+        pessoa.setCorDosOlhos("Azul Claro");
         pessoa.setImovelPessoal("Sim");
         pessoa.setTemCarroOuMoto("Carro");
         pessoa.setVerificarQuantidadeDeVeiculos(5);
@@ -22,7 +22,7 @@ public class PessoaTest01 {
         System.out.println("Registro de Pessoa");
         System.out.println("Seu nome: "+pessoa.getNome() + "\n" +"Sua idade: "+pessoa.getIdade() + "\n" + "Seu CPF: "+pessoa.getCpf());
         System.out.println("Sua Altura é: "+pessoa.getAltura() + "\n" + "Seu sexo: " +pessoa.getSexo() + "\n" + "Seu tipo de cabelo é: "+pessoa.getCabelo());
-        System.out.println("Sua cor Favorita é: "+pessoa.getSuaCorFavorita() + "\n" + "Sua cor dos olhos é: "+pessoa.getCorDosOlgos());
+        System.out.println("Sua cor Favorita é: "+pessoa.getSuaCorFavorita() + "\n" + "Sua cor dos olhos é: "+pessoa.getCorDosOlhos());
         System.out.println("Você tem imovel:" + pessoa.getImovelPessoal() + "\n" + "Você tem Carro ou Moto: " +pessoa.getTemCarroOuMoto() + "\n" + "Quantidade De Veículos: "+pessoa.getVerificarQuantidadeDeVeiculos());
     }
 }
