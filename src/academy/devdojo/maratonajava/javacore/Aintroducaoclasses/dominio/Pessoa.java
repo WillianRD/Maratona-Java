@@ -104,7 +104,7 @@ public class Pessoa {
                 this.ImovelPessoal = ImovelPessoal;
                 break;
             default:
-                System.out.println("Não reconheci a escolha entre 'Sim' & 'Não' ");
+                System.out.println("Escolha entre 'Sim' & 'Não' ");
         }
     }
 
