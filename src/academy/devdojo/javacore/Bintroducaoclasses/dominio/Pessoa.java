@@ -1,4 +1,4 @@
-package academy.devdojo.javacore.dominio;
+package academy.devdojo.javacore.Bintroducaoclasses.dominio;
 
 import java.util.Arrays;
 
@@ -8,8 +8,18 @@ public class Pessoa {
     private int idade, verificarQuantidadeDeVeiculos;
     private double altura;
 
-    public void imprime(){
-        System.out.println(this.nome);
+    public Pessoa(String nome, String sexo, String cabelo, String suaCorFavorita, String ImovelPessoal, String temCarroOuMoto,
+        String corDosOlhos, int idade, int verificarQuantidadeDeVeiculos, double altura){
+        this.nome = nome;
+        this.sexo = sexo;
+        this.cabelo = cabelo;
+        this.suaCorFavorita = suaCorFavorita;
+        this.ImovelPessoal = ImovelPessoal;
+        this.temCarroOuMoto = temCarroOuMoto;
+        this.corDosOlhos = corDosOlhos;
+        this.idade = idade;
+        this.verificarQuantidadeDeVeiculos = verificarQuantidadeDeVeiculos;
+        this.altura = altura;
     }
     //    Método setter que busca o nome da pessoa e faz uma validação caso se for menor
     public void setNome(String nome) {
@@ -17,7 +27,6 @@ public class Pessoa {
             throw new RuntimeException("Verificação de Login Inválida");
         }
         this.nome = nome;
-
     }
 
     //    Método para verificar a idade, se for < || = o print mostra o erro
