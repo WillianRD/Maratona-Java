@@ -1,61 +1,47 @@
 package academy.devdojo.javacore.Bintroducaoclasses.dominio;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Pessoa {
-    // Variaveis que são usadas para guardar informações da classe Pessoa
-    private String nome, sexo, cpf, cabelo, suaCorFavorita, ImovelPessoal, temCarroOuMoto, corDosOlhos;
+    private String nome, sexo, cpf, cabelo, imovelPessoal, temCarroOuMoto, suaCorFavorita, corDosOlhos;
     private int idade, verificarQuantidadeDeVeiculos;
     private double altura;
 
-    public Pessoa(String nome, String sexo, String cabelo, String suaCorFavorita, String ImovelPessoal, String temCarroOuMoto,
-        String corDosOlhos, int idade, int verificarQuantidadeDeVeiculos, double altura){
-        this.nome = nome;
-        this.sexo = sexo;
-        this.cabelo = cabelo;
-        this.suaCorFavorita = suaCorFavorita;
-        this.ImovelPessoal = ImovelPessoal;
-        this.temCarroOuMoto = temCarroOuMoto;
-        this.corDosOlhos = corDosOlhos;
-        this.idade = idade;
-        this.verificarQuantidadeDeVeiculos = verificarQuantidadeDeVeiculos;
-        this.altura = altura;
-    }
-    //    Método setter que busca o nome da pessoa e faz uma validação caso se for menor
+//    public Pessoa(String nome, String sexo, String cabelo, String suaCorFavorita, String imovelPessoal, String temCarroOuMoto,
+//                  String corDosOlhos, int idade, int verificarQuantidadeDeVeiculos, double altura) {
+//    }
+
     public void setNome(String nome) {
-        if (nome.length() < 4) {
+        if (nome.length() >= 2) {
+            this.nome = nome;
+        } else {
             throw new RuntimeException("Verificação de Login Inválida");
         }
-        this.nome = nome;
     }
 
-    //    Método para verificar a idade, se for < || = o print mostra o erro
     public void setIdade(int idade) throws IllegalArgumentException {
-        if (idade <= 0 || idade > 128) {
+        if (idade <= 0 || idade < 128) {
+            this.idade = idade;
+        } else {
             throw new RuntimeException("Idade Inválida");
         }
-        this.idade = idade;
     }
 
-    //    Método para verificar o CPF, caso seja menor que 11 da um print na tela de erro
     public void setCpf(String cpf) throws IllegalArgumentException {
-        try {
-            if (cpf.length() < 11 || cpf.length() > 11) {
-                throw new RuntimeException("CPF Inválido");
-
-            }
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
+        if (cpf.length() == 11) {
+            this.cpf = cpf;
+        } else {
+            throw new RuntimeException("O campo CPF é obrigatório.");
         }
-        this.cpf = cpf;
     }
 
-    // Caso a altura não seja informada, mostra um print na tela de Erro
     public void setAltura(double altura) {
-        if (altura > 10 && altura <= 220) {
+        if (altura > 10F || altura <= 2.55) {
             this.altura = altura;
         } else {
-            System.out.println("Altura ultrapassou do limite ou altura não informada!");
+            throw new RuntimeException("Altura ultrapassou do limite ou altura não informada!");
         }
     }
 
@@ -63,60 +49,63 @@ public class Pessoa {
         switch (sexo) {
             case "Masculino":
                 this.sexo = sexo;
+                break;
             case "Feminino":
                 this.sexo = sexo;
                 break;
             default:
-                System.out.println("ERRO: Sexo invalido");
+                System.out.println("O campo 'sexo' é obrigatório. Por favor, selecione uma opção");
         }
-
     }
 
     public void setCabelo(String cabelo) {
         switch (cabelo) {
-            case "Morena":
+            case "Cabelo Liso":
                 this.cabelo = cabelo;
                 break;
-            case "Loira":
+            case "Cabelo Ondulado":
                 this.cabelo = cabelo;
                 break;
-            case "Ruiva":
+            case "Cabelo Cacheado":
+                this.cabelo = cabelo;
+                break;
+            case "Cabelo Crespo":
                 this.cabelo = cabelo;
                 break;
             default:
-                System.out.println("ERRO: Nenhum tipo de cabelo definido");
+                System.out.println("Por favor, selecione uma opção de tipo de cabelo.");
         }
     }
 
     public void setCorDosOlhos(String corDosOlhos) {
-        String[] CorDosOlhos = new String[]{
+        String[] coresDosolhos = new String[]{
                 "Castanho Escuros", "Castanhos Claro", "Verde Claro", "Azul Claro", "Azul Escuro", "Avelã", "Preto"
         };
-        if (Arrays.asList(CorDosOlhos).contains(corDosOlhos)) {
+        if (Arrays.asList(coresDosolhos).contains(corDosOlhos)) {
             this.corDosOlhos = corDosOlhos;
         } else {
-            System.out.println("Desculpe, a cor dos olhos não existe");
+          throw new IllegalArgumentException("Desculpe, a cor dos olhos não existe");
         }
+
     }
 
     public void setSuaCorFavorita(String suaCorFavorita) {
-        String[] corFavorita = new String[]{
-                "Vermelho", "Azul", "Preto", "Marrom", "Roxo", "Azul Bêbê", "Verde", "Amarelo"
+        String[] corFavorita = {"Vermelho", "Azul", "Preto", "Marrom", "Roxo", "Azul Bêbê", "Verde", "Amarelo"
         };
         if (Arrays.asList(corFavorita).contains(suaCorFavorita)) {
             this.suaCorFavorita = suaCorFavorita;
         } else {
-            System.out.println("Desculpe, a cor  não é uma opção válida.");
+          throw new IllegalArgumentException("Não foi possível redefinir a cor. Insira uma cor válida antes de tentar novamente");
         }
     }
 
-    public void setImovelPessoal(String ImovelPessoal) {
+    public void setimovelPessoal(String ImovelPessoal) {
         switch (ImovelPessoal) {
             case "Sim":
-                this.ImovelPessoal = ImovelPessoal;
+                this.imovelPessoal = ImovelPessoal;
                 break;
             case "Não":
-                this.ImovelPessoal = ImovelPessoal;
+                this.imovelPessoal = ImovelPessoal;
                 break;
             default:
                 System.out.println("Escolha entre 'Sim' & 'Não' ");
@@ -127,8 +116,10 @@ public class Pessoa {
         switch (temCarroOuMoto) {
             case "Carro":
                 this.temCarroOuMoto = temCarroOuMoto;
+                break;
             case "Moto":
                 this.temCarroOuMoto = temCarroOuMoto;
+                break;
             case "Não Tenho":
                 this.temCarroOuMoto = temCarroOuMoto;
                 break;
@@ -141,7 +132,7 @@ public class Pessoa {
         if (verificarQuantidadeDeVeiculos > 0) {
             this.verificarQuantidadeDeVeiculos = verificarQuantidadeDeVeiculos;
         } else {
-            System.out.println(" Quantidade: O valor não pode ser < ou = 0");
+            System.out.println("\"Erro: A quantidade não pode ser nula ou negativa. Por favor, insira uma quantidade válida.");
         }
     }
 
@@ -178,7 +169,7 @@ public class Pessoa {
     }
 
     public String getImovelPessoal() {
-        return this.ImovelPessoal;
+        return this.imovelPessoal;
     }
 
     public String getTemCarroOuMoto() {
