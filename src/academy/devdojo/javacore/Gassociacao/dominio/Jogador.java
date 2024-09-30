@@ -9,7 +9,7 @@ public class Jogador {
 
     public void imprime() {
         System.out.println("Jogador Brasileiro: " + this.nome);
-
+        System.out.println("Teste");
     }
 
     public String getNome() {
