@@ -1,17 +1,11 @@
 package academy.devdojo.javacore.Bintroducaoclasses.dominio;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class Pessoa {
     private String nome, sexo, cpf, cabelo, imovelPessoal, temCarroOuMoto, suaCorFavorita, corDosOlhos;
     private int idade, verificarQuantidadeDeVeiculos;
-    private double altura;
-
-//    public Pessoa(String nome, String sexo, String cabelo, String suaCorFavorita, String imovelPessoal, String temCarroOuMoto,
-//                  String corDosOlhos, int idade, int verificarQuantidadeDeVeiculos, double altura) {
-//    }
+    private double altura;  
 
     public void setNome(String nome) {
         if (nome.length() >= 2) {
