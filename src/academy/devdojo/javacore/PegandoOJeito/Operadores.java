@@ -1,6 +1,10 @@
+/*
+Class Calculadora, realizar calculos com adição, subtração, multiplicacação e divisão
+Isso e para mostrar meu conhecimento em Java, com classs, atributos, métodos modificadores de acesso
+ */
 package academy.devdojo.javacore.PegandoOJeito;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Operadores {
     private static int num1;
@@ -9,7 +13,7 @@ public class Operadores {
     private static byte usuarioAdicionarValor;
     private static  Scanner in = new Scanner(System.in);
 
-    public static void calcularSoma() throws Exception {
+    public static void calcularSoma() {
         System.out.println("Você solicitou a função Soma");
 
         System.out.println("Digite um número para a Soma");
@@ -20,7 +24,6 @@ public class Operadores {
 
         resultado = num1 + num2;
         System.out.println("O valor inserido da soma é " + num1  + " + " +  num2 + " : " + resultado);
-        in.close();
     }
 
     public static void calcularSubtracao() {
