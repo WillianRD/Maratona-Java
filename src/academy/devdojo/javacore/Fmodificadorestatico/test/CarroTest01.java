@@ -4,9 +4,7 @@ import academy.devdojo.javacore.Fmodificadorestatico.dominio.Carro;
 
 public class CarroTest01 {
     public static void main(String[] args) {
-
         Carro carro = new Carro("Willian","Ferrari SF90", 370.44);
-
         carro.imprime();
         Carro.setVelocidadeLimite(2421);
         Carro carro1 = new Carro("Yuri","Ferrari La",347.2);
