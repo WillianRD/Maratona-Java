@@ -1,4 +1,4 @@
-package academy.devdojo.HHeranca.dominio;
+package academy.devdojo.javacore.HHeranca.dominio;
 
 public class Pessoa {
     protected String nome;

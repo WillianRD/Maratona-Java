@@ -19,4 +19,8 @@ public class AirCraft {
     public boolean bookSeat(String seat){
         return avaliableSeats.remove(seat);
     }
+
+    public String getName() {
+        return avaliableSeats.toString(); //Atualizar
+    }
 }

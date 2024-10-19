@@ -1,4 +1,4 @@
-package academy.devdojo.exeception.test;
+package academy.devdojo.javacore.exeception.test;
 
 import java.io.File;
 import java.io.IOException;
