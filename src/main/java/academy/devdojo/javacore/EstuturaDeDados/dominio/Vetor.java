@@ -22,7 +22,6 @@ public class Vetor {
 
     //    Método para adicionar
     public boolean adicionarElemento(String elemento) {
-
         if (this.tamanho < this.elementos.length) {
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
@@ -38,10 +37,9 @@ public class Vetor {
 
     @Override
     public String toString() {
-        return "Vetor{" +
-                "Elementos=" + Arrays.toString(elementos) +
-                ", tamanho do Array=" + tamanho +
-                '}';
+        return "Vetores: " +
+                "Nomes = " + Arrays.toString(elementos) + "\n" +
+                " Tamanho do Array=" + tamanho;
     }
 }
 
