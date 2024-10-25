@@ -3,7 +3,6 @@ package academy.devdojo.javacore.Ycolecoes.test;
 import academy.devdojo.javacore.Ycolecoes.dominio.Smartphone;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class SmartphoneTest01 {

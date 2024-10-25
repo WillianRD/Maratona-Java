@@ -1,7 +1,5 @@
 package academy.devdojo.javacore.PegandoOJeito;
 
-import java.util.Scanner;
-
 public class PegandoOJeito {
     private String usuarioAdministrador = "Will";
     private String nomeUser;

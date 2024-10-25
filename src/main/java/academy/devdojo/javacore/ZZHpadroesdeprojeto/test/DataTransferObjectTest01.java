@@ -1,6 +1,7 @@
 package academy.devdojo.javacore.ZZHpadroesdeprojeto.test;
 
 import academy.devdojo.javacore.ZZHpadroesdeprojeto.dominio.*;
+import main.java.academy.devdojo.javacore.ZZHpadroesdeprojeto.dominio.*;
 
 public class DataTransferObjectTest01 {
     public static void main(String[] args) {

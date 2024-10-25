@@ -1,6 +1,5 @@
 package academy.devdojo.javacore.ZZIjdbc.test;
 
-import academy.devdojo.javacore.ZZIjdbc.conn.ConnectionFactory;
 import academy.devdojo.javacore.ZZIjdbc.dominio.Producer;
 import academy.devdojo.javacore.ZZIjdbc.repository.ProducerRepository;
 

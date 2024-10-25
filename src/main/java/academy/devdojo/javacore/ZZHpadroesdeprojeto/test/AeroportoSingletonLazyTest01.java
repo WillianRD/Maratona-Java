@@ -1,6 +1,5 @@
 package academy.devdojo.javacore.ZZHpadroesdeprojeto.test;
 
-import academy.devdojo.javacore.ZZHpadroesdeprojeto.dominio.AeroportoSingletonEager;
 import academy.devdojo.javacore.ZZHpadroesdeprojeto.dominio.AeroportoSingletonLazy;
 
 import java.lang.reflect.Constructor;

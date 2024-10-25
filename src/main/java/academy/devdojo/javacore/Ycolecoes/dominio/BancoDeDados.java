@@ -1,7 +1,5 @@
 package academy.devdojo.javacore.Ycolecoes.dominio;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class BancoDeDados implements Comparable<BancoDeDados>{
