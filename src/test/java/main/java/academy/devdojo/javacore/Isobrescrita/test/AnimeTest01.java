@@ -1,6 +1,6 @@
-package main.java.academy.devdojo.javacore.sobrescrita.test;
+package main.java.academy.devdojo.javacore.Isobrescrita.test;
 
-import main.java.academy.devdojo.javacore.sobrescrita.dominio.Anime;
+import main.java.academy.devdojo.javacore.Isobrescrita.dominio.Anime;
 
 public class AnimeTest01 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package main.java.academy.devdojo.javacore.sobrescrita.dominio;
+package main.java.academy.devdojo.javacore.Isobrescrita.dominio;
 
 public class Anime extends Object {
     private String nome;
