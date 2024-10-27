@@ -1,37 +1,24 @@
 package main.javacore.Kenum.dominio;
 
 public class Clientes {
+
     private String nome;
     private TipoCliente tipoCliente;
+    private TipoDePagamento tipoDePagamento;
 
-    // Forçando o construtor da classe, passar um tipo da minha classe TipoCliente
-    public Clientes(String nome, TipoCliente tipoCliente){
+    public Clientes(String nome, TipoCliente tipoCliente, TipoDePagamento tipoDePagamento) {
         this.nome = nome;
         this.tipoCliente = tipoCliente;
+        this.tipoDePagamento = tipoDePagamento;
     }
 
     @Override
     public String toString() {
         return "Clientes{" +
-                "nome='" + nome + '\'' +
-                ", tipoCliente=" + tipoCliente +
+                "Nome Cliente: '" + nome + '\'' +
+                ", Tipo Cliente: " + tipoCliente.getNomeRelatorio() +
+                ", Tipo ClienteInt: " + tipoCliente.getValor() +
+                ", Tipo Pagamento: " + tipoDePagamento +
                 '}';
     }
-
-    public String getNome(){
-        return nome;
-    }
-
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-
-    public TipoCliente getTipoCliente(){
-        return tipoCliente;
-    }
-
-    public void setTipoCliente(TipoCliente tipoCliente){
-        this.tipoCliente = tipoCliente;
-    }
-
 }

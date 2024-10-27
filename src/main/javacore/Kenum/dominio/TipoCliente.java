@@ -13,6 +13,15 @@ public enum TipoCliente {
         this.nomeRelatorio = nomeRelatorio;
     }
 
+    public static TipoCliente porTipoClientePorNomeRelatorio(String nomeRelatorio){
+        for (TipoCliente tipoCliente: values()){
+            if(tipoCliente.getNomeRelatorio().equals(nomeRelatorio)){
+                return tipoCliente;
+            }
+        }
+        return null;
+    }
+
     public int getValor(){
         return valor;
     }
