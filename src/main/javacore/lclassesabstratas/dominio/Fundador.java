@@ -16,8 +16,16 @@ public final class Fundador extends Funcionario {
     }
 
     @Override
+    public void imprime(){
+        super.imprime();
+        System.out.println("Carga Horária: " + this.cargaHoraria);
+        System.out.println("Quantidade de Empresas: " + this.quantidadeDeEmpresas);
+        System.out.println("Quantidade de Funcionario " + this.quantidadeDeFuncionario);
+    }
+
+    @Override
     public void calcularBonus(){
-        this.salario = this.salario + this.salario * 0.10;
+        this.salario = this.salario + this.salario * 0.14;
     }
 
     @Override
