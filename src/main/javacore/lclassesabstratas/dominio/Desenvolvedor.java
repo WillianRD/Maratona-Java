@@ -1,6 +1,6 @@
 package main.javacore.lclassesabstratas.dominio;
 
-public class Desenvolvedor extends Funcionario{
+public final class Desenvolvedor extends Funcionario{
     private int quantidadeDeProjetos;
     private String linguagensDeProgramacao;
 
@@ -8,6 +8,11 @@ public class Desenvolvedor extends Funcionario{
         super(nome,salario);
         this.quantidadeDeProjetos = quantidadeDeProjetos;
         this.linguagensDeProgramacao = linguagensDeProgramacao;
+    }
+
+    @Override
+    public void calcularBonus(){
+        this.salario = this.salario + this.salario * 0.05;
     }
 
     @Override

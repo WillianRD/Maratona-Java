@@ -1,6 +1,6 @@
 package main.javacore.lclassesabstratas.dominio;
 
-public class Fundador extends Funcionario {
+public final class Fundador extends Funcionario {
     private String funcao;
     private double cargaHoraria;
     private int quantidadeDeEmpresas, quantidadeDeFuncionario;
@@ -12,6 +12,12 @@ public class Fundador extends Funcionario {
         this.cargaHoraria = cargaHoraria;
         this.quantidadeDeEmpresas = quantidadeDeEmpresas;
         this.quantidadeDeFuncionario = quantidadeDeFuncionario;
+        calcularBonus();
+    }
+
+    @Override
+    public void calcularBonus(){
+        this.salario = this.salario + this.salario * 0.10;
     }
 
     @Override
