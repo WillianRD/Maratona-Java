@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FIleWriter01 {
+public class FIleWriterTest01 {
     public static void main(String[] args) {
         File file = new File("file.txt");
 
