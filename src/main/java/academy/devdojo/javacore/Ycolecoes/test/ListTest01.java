@@ -5,8 +5,8 @@ import java.util.List;
 
 public class ListTest01 {
     public static void main(String[] args) {
-        List<String> nomes = new ArrayList<>(0);
-        List<String> nomes2 = new ArrayList<>(0);
+        List<String> nomes = new ArrayList<>(16);
+        List<String> nomes2 = new ArrayList<>(16);
         nomes.add("Will");
         nomes.add("DevDojo");
         nomes.add("Will");
@@ -18,6 +18,9 @@ public class ListTest01 {
         nomes2.add("Uaii");
         nomes2.add("Will");
 
+        nomes.addAll(nomes2);
+        nomes.remove("Will");
+        nomes2.remove("Will");
 
         System.out.println(nomes.remove("Will"));
         nomes.addAll(nomes2);
@@ -48,5 +51,13 @@ public class ListTest01 {
         for (int j = 0; j < size1; j++) {
             System.out.println(numeros.get(j));
         }
+
+        List<String> number  = new ArrayList(16);
+        number.add("WIllian");
+        System.out.println(number.remove("WIll")); // Removendo um objeto com nome especifico
+        for (String n : number){
+            System.out.println(number);
+        }
+
     }
 }
