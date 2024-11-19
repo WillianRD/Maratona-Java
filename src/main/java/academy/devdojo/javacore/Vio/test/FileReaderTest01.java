@@ -7,18 +7,28 @@ import java.io.IOException;
 public class FileReaderTest01 {
     public static void main(String[] args) {
         File file = new File("file.txt");
+        try (FileReader fileReader = new FileReader(file)) {
+//            char[] ler = new char[1000];
+//            int size = fileReader.read(ler);
+//            System.out.println("Quantidade de Caracteres: " + size);
+//
+//            for (char in : ler){
+//                System.out.println(in);
+//                if( in == 0) return;
+////                break;
+//            }
 
-        try(FileReader fileReader = new FileReader(file)) {
-            char [] in = new char[1];
-            fileReader.read(in);
-            for (char c : in){
-                System.out.println(c);
+
+
+            int i;
+            while ((i = fileReader.read()) != -1) {
+//                Lendo posição por posição
+                System.out.print((char) i);
             }
-            System.out.println((fileReader.read()));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }
 
