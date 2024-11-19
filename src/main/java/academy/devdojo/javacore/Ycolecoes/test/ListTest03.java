@@ -1,10 +1,15 @@
 package academy.devdojo.javacore.Ycolecoes.test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ListTest03 {
     public static void main(String[] args) {
+        ListTest03 ls = new ListTest03();
+        ls.listaComNomesTipados();
+
+    }
+
+    public void listSemTipagem() {
         List enumeros = new ArrayList(10);
         enumeros.add("Will");
         enumeros.add(22);
@@ -18,9 +23,11 @@ public class ListTest03 {
         for (Object o : enumeros) {
             System.out.println(o);
         }
+    }
 
-        System.out.println("--------------------");
+    public void listaComNomesTipados() {
         List<String> enumA = new ArrayList<>(16);
+        enumA.add("WIll");
         enumA.add("WIll");
         enumA.add("Coda Fofo");
         enumA.add("Yuri Marçal");
@@ -28,8 +35,21 @@ public class ListTest03 {
         enumA.add("Guanabara");
         enumA.add("Guanabara da Shoppe");
 
+        Collections.sort(enumA);
+        System.out.println(enumA);
+
         System.out.println("Listando todos os nomes");
-        for (String o : enumA){
+
+        // Lista sem duplicidade de nomes
+        Set<String> semDuplicidade = new HashSet<>(enumA);
+
+        // Voltando para lista
+        List<String> convertendoParaLista = new ArrayList<>(semDuplicidade);
+
+        Collections.sort(convertendoParaLista);
+        System.out.println("Alterando Duplicidade: " + convertendoParaLista);
+
+        for (String o : enumA) {
             System.out.println(o);
         }
 
@@ -37,12 +57,17 @@ public class ListTest03 {
         for (int i = 0; i < 1; i++) {
             System.out.println(enumA.get(i));
         }
+
         System.out.println("-----------------------------");
         System.out.println("Listando tudo da lista");
         for (String thisListIsPerson : enumA) {
             System.out.println(thisListIsPerson);
         }
-        System.out.println("----------------------------------");
+
+    }
+
+
+    public void listInteger() {
         System.out.println("Lista de Integer");
         List<Integer> num = new ArrayList<>(2);
         num.add(1);
@@ -51,5 +76,6 @@ public class ListTest03 {
         for (Integer i : num) {
             System.out.println(i);
         }
+
     }
 }
