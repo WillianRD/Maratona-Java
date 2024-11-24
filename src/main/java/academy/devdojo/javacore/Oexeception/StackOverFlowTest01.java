@@ -1,4 +1,4 @@
-package academy.devdojo.javacore.exeception;
+package academy.devdojo.javacore.Oexeception;
 
 public class StackOverFlowTest01 {
     public static void main(String[] args){

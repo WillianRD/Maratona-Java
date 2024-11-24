@@ -1,6 +1,8 @@
 package academy.devdojo.javacore.Ycolecoes.dominio;
 
 
+import java.util.Objects;
+
 public class Smartphone {
     private String serialNumber;
     private String marca;
@@ -37,9 +39,10 @@ public class Smartphone {
 // x.equals(y) == false
 // y.hashcode() != x.hashcode() x.equals(y) deverá ser false.
 
+
     @Override
     public int hashCode() {
-        return serialNumber == null ? 0 : this.serialNumber.hashCode();
+        return Objects.hash(serialNumber, marca);
     }
 
     @Override
@@ -49,6 +52,7 @@ public class Smartphone {
                 ", marca='" + marca + '\'' +
                 '}';
     }
+
 
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;

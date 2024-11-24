@@ -1,4 +1,4 @@
-package academy.devdojo.javacore.exeception.error.test.runtime.test;
+package academy.devdojo.javacore.Oexeception.error.test.runtime.test;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
