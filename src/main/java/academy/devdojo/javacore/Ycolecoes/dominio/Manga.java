@@ -78,15 +78,16 @@ public class Manga implements Comparable<Manga> {
 //        Negativo se o this < outroManga
 //        se this == outroManga, return 0
 //        positivo se this > outroManga
-        if (this.id < outroManga.getID()){
-            return -1;
-        } else if (this.id.equals(outroManga.getID())){
-            return 0;
-        } else {
-            return 1;
-        }
-//
-//       return this.id.compareTo(outroManga.getID()); //Para organizar em ordem de ID
+
+//        if (this.id < outroManga.getID()){
+//            return -1;
+//        } else if (this.id.equals(outroManga.getID())){
+//            return 0;
+//        } else {
+//            return 1;
+//        }
+
+       return this.id.compareTo(outroManga.getID()); //Para organizar em ordem de ID
 //        return Double.valueOf(preco).compareTo(outroManga.getPreco()); // Para organizar por ordem de preço crescente
 //       return  this.nome.compareTo(outroManga.getNome()); // Para organizar os nomes em ordem Alfabética
 
