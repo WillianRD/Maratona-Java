@@ -6,11 +6,6 @@ public class Producer {
     private Integer id;
     private String name;
 
-    /*
-    Metodo privado
-    Statico - Faz parte da class
-    Final - não pode ser extendido por nenhuma classe
-     */
     public static final class ProducerBuilder {
         private Integer id;
         private String name;
@@ -25,7 +20,7 @@ public class Producer {
             return new ProducerBuilder();
         }
 
-        public ProducerBuilder name(String name) {
+        public ProducerBuilder build (String name) {
             this.name = name;
             return this;
         }
