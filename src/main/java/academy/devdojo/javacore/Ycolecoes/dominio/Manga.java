@@ -12,7 +12,7 @@ public class Manga implements Comparable<Manga> {
         Objects.requireNonNull(id, "ID não pode ser nulo");
         Objects.requireNonNull(nome, "Nome não pode ser nulo");
         Objects.requireNonNull(preco, "Preço não pode ser nulo");
-        Objects.requireNonNull(quantidade,"Não pode ser == 0 ou < 0");
+        Objects.requireNonNull(quantidade,"Não pode ser = 0 ou < 0");
         this.id = id;
         this.nome = nome;
         this.preco = preco;

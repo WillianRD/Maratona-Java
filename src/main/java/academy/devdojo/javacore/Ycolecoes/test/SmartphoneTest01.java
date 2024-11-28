@@ -10,7 +10,7 @@ public class SmartphoneTest01 {
         Smartphone s1 = new Smartphone("1222", "Lg");
         Smartphone s2 = new Smartphone("222" , "Xiaomi");
         Smartphone s3 = new Smartphone("1111" , "Iphone");
-        Smartphone s4 = new Smartphone("1112221","Iphone");
+        Smartphone s4 = new Smartphone("11121","Iphone");
 
         List<Smartphone> smartphones= new ArrayList<>(6);
         smartphones.add(s1);
