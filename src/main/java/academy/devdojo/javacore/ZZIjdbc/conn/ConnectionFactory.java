@@ -12,7 +12,15 @@ public class ConnectionFactory {
         String url = "jdbc:mysql://localhost:3306/produtos";
         String username = "root"; //        usuarioLogin
         String password = "root"; //        senhaUsuario
-        return DriverManager.getConnection(url, username, password);
+//        return DriverManager.getConnection(url, username, password);
+
+        try {
+            Connection connection = DriverManager.getConnection(url, username, password);
+            System.out.println(connection);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
 
     }
 
