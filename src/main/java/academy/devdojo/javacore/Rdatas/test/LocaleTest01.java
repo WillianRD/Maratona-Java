@@ -14,6 +14,8 @@ public class LocaleTest01 {
         Locale localeIndia = new Locale("hi", "IN");
         Locale localeJapao = new Locale("ja", "JP");
         Locale localeBrasil = new Locale(".br","BR");
+        Locale localeCanada = new Locale("ca","CA");
+        Locale localeUs = new Locale("en", "US");
 
         Calendar calendar = Calendar.getInstance();
         DateFormat dateFormatL1 = DateFormat.getDateInstance(DateFormat.FULL, localeItaly);
@@ -21,18 +23,25 @@ public class LocaleTest01 {
         DateFormat dateFormatL3 = DateFormat.getDateInstance(DateFormat.FULL, localeIndia);
         DateFormat dateFormatL4 = DateFormat.getDateInstance(DateFormat.FULL, localeJapao);
         DateFormat dateFormatL5 = DateFormat.getDateInstance(DateFormat.FULL,localeBrasil);
+        DateFormat dateFormatL6 = DateFormat.getDateInstance(DateFormat.FULL,localeCanada);
+        DateFormat dateFormatL7 = DateFormat.getDateInstance(DateFormat.FULL,localeUs);
 
         System.out.println("Italia " + dateFormatL1.format(calendar.getTime())); // Saída Italia martedì 10 dicembre 2024
         System.out.println("Suiça " + dateFormatL2.format(calendar.getTime())); // Saída Suiça martedì, 10 dicembre 2024
         System.out.println("India " + dateFormatL3.format(calendar.getTime())); // Saída India मंगलवार, 10 दिसंबर 2024
         System.out.println("Japão " + dateFormatL4.format(calendar.getTime())); // Saída Japão 2024年12月10日火曜日
         System.out.println("Brasil " + dateFormatL5.format(calendar.getTime()));
+        System.out.println("Canád " + dateFormatL6.format(calendar.getTime()));
+        System.out.println("Estados  " + dateFormatL7.format(calendar.getTime()));
         System.out.println("----------------------------------------------------");
 
-        System.out.println(localeItaly.getDisplayCountry()); // Saída Itália
-        System.out.println(localeCH.getDisplayCountry()); // Saída Suíça
-        System.out.println(localeIndia.getDisplayCountry()); // Saída Índia
-        System.out.println(localeJapao.getDisplayCountry()); // Saída Japão
-        System.out.println(localeItaly.getDisplayLanguage(localeIndia));
+        // Passando localeUs como parâmetro para imprimir o texto com a traduçaõ do Inglês
+        System.out.println(localeItaly.getDisplayCountry(localeUs)); // Saída Itália
+        System.out.println(localeCH.getDisplayCountry(localeUs)); // Saída Suíça
+        System.out.println(localeIndia.getDisplayCountry(localeUs)); // Saída Índia
+        System.out.println(localeJapao.getDisplayCountry(localeUs)); // Saída Japão
+        System.out.println(localeItaly.getDisplayLanguage(localeUs)); // italiano
+        System.out.println(localeCanada.getDisplayCountry(localeUs)); // Canadá
+        System.out.println(localeUs.getDisplayCountry(localeUs)); // Estados Unidos
     }
 }
