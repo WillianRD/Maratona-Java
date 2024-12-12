@@ -19,7 +19,7 @@ public class SimplesDateFormat {
             e.printStackTrace();
         }
         // Saídaa
-//         Wed Dec 11 00:00:00 GMT-03:00 2024 -- Retorna o valor padrão
+//         Wed Dec 11 00:00:00 GMT-03:00 2024 -- Retorna o valor padrão da formatação, Chamando o toString
 
     }
 }
