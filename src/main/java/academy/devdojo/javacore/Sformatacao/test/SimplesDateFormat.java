@@ -18,7 +18,7 @@ public class SimplesDateFormat {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        // Saída
+        // Saídaa
 //         Wed Dec 11 00:00:00 GMT-03:00 2024 -- Retorna o valor padrão
 
     }
