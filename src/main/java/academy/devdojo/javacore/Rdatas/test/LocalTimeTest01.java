@@ -1,4 +1,4 @@
-package academy.devdojo.javacore.Sformatacao.test;
+package academy.devdojo.javacore.Rdatas.test;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
