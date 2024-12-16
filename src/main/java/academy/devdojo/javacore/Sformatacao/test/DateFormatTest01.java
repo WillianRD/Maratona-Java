@@ -8,6 +8,7 @@ public class DateFormatTest01 {
         Calendar calendar = Calendar.getInstance();
         DateFormat [] dateFormats = new DateFormat[7];
 
+        //Teste
         dateFormats[0] = DateFormat.getInstance(); // Formatação simples de acordo com o SO (10/12/2024 05:38)
         dateFormats[1] = DateFormat.getDateInstance(); // Retorna a data (10 de dez. de 2024)
         dateFormats[2] = DateFormat.getDateTimeInstance(); // Retorna a data & hora (10 de dez. de 2024 05:38:49)
