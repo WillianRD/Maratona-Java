@@ -8,6 +8,16 @@ public class PatternMatcherTest01 {
         String regex = "aba";
         String texto = "ababa";
         String texto2 = "abababa";
+
+        String procurarEmail = "@gmail.com";
+        String email = "Willian@gmail.com";
+
+        Pattern pattern1 = Pattern.compile(procurarEmail);
+        Matcher matcherRegexEmail = pattern1.matcher(email);
+
+        System.out.println(email);
+        System.out.println(procurarEmail);
+
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto2);
 
@@ -15,8 +25,9 @@ public class PatternMatcherTest01 {
         System.out.println("Indice 0123456789");
         System.out.println("Regex " + regex);
         System.out.println("Posições encontradas");
-        while (matcher.find()){
-            System.out.println(matcher.start() + " " + matcher.group() + "\n");
+
+        while (matcherRegexEmail.find()){
+            System.out.print(matcherRegexEmail.start() + " " + matcherRegexEmail.group() + "\n");
         }
     }
 }
