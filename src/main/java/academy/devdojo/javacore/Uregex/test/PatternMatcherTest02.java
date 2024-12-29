@@ -12,9 +12,9 @@ public class PatternMatcherTest02 {
         // \w = a-ZA-ZA, digitos
         // \W = tudo o que não é incluso
 
-        String regex = "\\W";
+        String regex = "\\wa";
         String texto = "ababa";
-        String texto2 = "aa@_l2213Lw wassd san";
+        String texto2 = " aa@_l2213Lw wassd san  ";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto2);
 
@@ -23,7 +23,7 @@ public class PatternMatcherTest02 {
         System.out.println("Regex " + regex);
         System.out.println("Posições encontradas");
         while (matcher.find()){
-            System.out.println(matcher.start() + " " + matcher.group() +"\n");
+            System.out.print(matcher.start() + " " + matcher.group() +"\n");
         }
     }
 }
