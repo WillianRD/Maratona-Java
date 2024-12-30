@@ -12,7 +12,7 @@ public class ScannerTest02 {
 
             if (scanner.hasNextInt()) {
                 int i = scanner.nextInt();
-                System.out.println("Integer " + i);
+                System.out.println("Int " + i);
 
             } else if (scanner.hasNextBoolean()) {
                 boolean b = scanner.nextBoolean();
