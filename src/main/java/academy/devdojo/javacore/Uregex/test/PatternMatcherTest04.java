@@ -11,17 +11,17 @@ public class PatternMatcherTest04 {
         // \S = Todos os caracteres excluindo os brancosa
         // \w = a-ZA-ZA, digitos
         // \W = tudo o que não é incluso
-        // []
+        // [] -
         // ? zero ou uma
         // * zero ou mais
         // + uma ou mais
         // {n,m} de n até m
-        // ()
-        // |
-        // $
-        String regex ="0[xX]([0-9a-fA-F])+ \\s|$";
+        // () - Agrupamento
+        // | ou (v|o) enconte v ou o
+        // $ - fim da linha
+        String regex ="0[xX]([0-9a-fA-F])+ (\\s|$)";
 //        String texto = "ababa";
-        String texto2 = "120x 0X 0xFFABC 0x109 ox1";
+        String texto2 = "12 0x 0X 0xFFABC 0x10G ox1";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto2);
 
