@@ -1,5 +1,6 @@
 package academy.devdojo.javacore.Uregex.test;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,18 +20,25 @@ public class PatternMatcherTest05 {
         // () - Agrupamento
         // | ou (v|o) enconte v ou o
         // $ - fim da linha
-        String regex ="0[xX]([0-9a-fA-F])+ (\\s|$)";
-//        String texto = "ababa";
-        String texto2 = "12 0x 0X 0xFFABC 0x10G ox1";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(texto2);
 
-        System.out.println("Texto " + texto2);
+        String regex ="([a-zA-Z0-9._-])+@([a-zA-Z])+(\\.([a-zA-Z])+)+";
+        String texto = "willian@gmail.com, 123joao@gmail.com, @#zoro@mail.com, teste@gmail.com.br";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(texto);
+
+        System.out.println("Email válido");
+        System.out.println("zoro@mail.com".matches(regex));
+
+        System.out.println("Mostrando todos os emails cadastrados: "+ "\n" + Arrays.toString(texto.split(",")) + "\n");
+        System.out.println("Email especifico " + texto.split(",")[1].trim());
+        System.out.println("\n");
+        System.out.println("Texto " + texto);
         System.out.println("Indice 0123456789");
         System.out.println("Regex " + regex);
         System.out.println("Posições encontradas");
         while (matcher.find()){
-            System.out.println(matcher.start() + " " + matcher.group());
+            System.out.print(matcher.start()+" "+matcher.group()+'\n');
         }
     }
 }
+
