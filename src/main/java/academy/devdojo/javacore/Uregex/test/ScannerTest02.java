@@ -4,13 +4,22 @@ import java.util.Scanner;
 
 public class ScannerTest02 {
     public static void main(String[] args) {
-        String texts = "Leide, Yuri, Will";
-        Scanner in = new Scanner(texts);
-        in.useDelimiter(",");
+        String texts = "Leide,Yuri,Will,true,200";
+        Scanner scanner = new Scanner(texts);
+        scanner.useDelimiter(",");
 
-        while (in.hasNext()){
-            System.out.println(in.next());
-        }
+        while (scanner.hasNext()) {
+
+            if (scanner.hasNextInt()) {
+                int i = scanner.nextInt();
+                System.out.println("Integer " + i);
+
+            } else if (scanner.hasNextBoolean()) {
+                boolean b = scanner.nextBoolean();
+                System.out.println("Boolean " + b);
+            } else {
+                System.out.println(scanner.next());
+            }
         }
     }
-
+    }
